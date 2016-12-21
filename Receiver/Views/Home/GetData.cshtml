@@ -1,0 +1,11 @@
+﻿<table class="table table-striped table-bordered">
+@foreach (var item in (IList<IDictionary<string, object>>)ViewBag.Data)
+{
+    <tr>
+        @foreach (var pair in item)
+        {
+            <td><strong>@pair.Key</strong> = <em>@pair.Value</em></td>
+        }
+    </tr>
+}
+</table>
